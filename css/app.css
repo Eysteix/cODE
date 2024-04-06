@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+li{
+    @apply p-4  text-slate-500 hover:underline decoration-indigo-700  underline-offset-8 mx-auto my-0 w-3/4 mt-2 rounded-lg ;
+    transition: 2s linear ease-in-out;
+}
+
+
+li.active{
+    @apply text-black font-bold underline;
+}
+
+i{
+    color: rgb(63, 52, 214);
+}
+
+.mobile-menu{
+    background: rgb(250, 248, 255);
+}
+.hero-img{
+    background:url("../Images/img\ \(6\).png") center no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 250px;
+}
+.hero-img2{
+    background:url("../Images/img\ \(13\).png") center no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 250px;
+}
+.svg-img{
+    background:url("../Images/programming-animate.svg") center no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 250px;
+}
+
+i.fab{
+    @apply rounded-full bg-gray-200 hover:bg-indigo-700 hover:text-gray-200;
+}
+
+i.fab{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+
+}
+
+.boxes img{
+    width:400px;
+    height: 200px;
+    @apply rounded-lg;
+}
