@@ -554,6 +554,11 @@ video {
   --tw-contain-style:  ;
 }
 
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -572,16 +577,6 @@ video {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .ml-2 {
@@ -624,8 +619,8 @@ video {
   height: 30vh;
 }
 
-.h-\[60vh\] {
-  height: 60vh;
+.h-\[80vh\] {
+  height: 80vh;
 }
 
 .h-full {
@@ -666,10 +661,6 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -831,6 +822,10 @@ video {
   line-height: 2.25rem;
 }
 
+.font-\[12px\] {
+  font-weight: 12px;
+}
+
 .font-\[14px\] {
   font-weight: 14px;
 }
@@ -841,10 +836,6 @@ video {
 
 .font-extrabold {
   font-weight: 800;
-}
-
-.font-\[12px\] {
-  font-weight: 12px;
 }
 
 .text-blue-200 {
@@ -890,6 +881,10 @@ video {
 .shadow-blue-200 {
   --tw-shadow-color: #bfdbfe;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+*{
+  scroll-behavior: smooth;
 }
 
 li {
@@ -1010,6 +1005,66 @@ footer{
   background-size: cover;
 }
 
+#hero{
+  animation: ZoomIn 1s linear;
+}
+
+#about .boxes{
+  animation: left 1s;
+}
+
+#gallery img{
+  animation: left 1s linear;
+}
+
+#gallery img:nth-child(even){
+  animation: right 1s linear;
+}
+
+@keyframes ZoomIn {
+  from{
+    opacity: 0;
+    transform: scale(60%);
+  }
+
+  to{
+    opacity: 2;
+  }
+}
+
+@keyframes left{
+  from{
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+
+  to{
+    opacity: 2;
+  }
+}
+
+@keyframes right {
+  from{
+    opacity: 0;
+    transform: translateX(600px);
+  }
+
+  to{
+    opacity: 2;
+  }
+}
+
+@keyframes ZoomIn {
+  from{
+    opacity: 0;
+    transform: scale(60%);
+  }
+
+  to{
+    opacity: 2;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -1029,10 +1084,6 @@ footer{
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:w-1\/4 {
-    width: 25%;
   }
 
   .md\:w-2\/5 {
@@ -1067,3 +1118,4 @@ footer{
     padding-left: 2.5rem;
   }
 }
+

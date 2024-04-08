@@ -25,12 +25,30 @@
 
 
 
-function hide(){
+function hide(e){
     document.querySelector(".mobile-menu").classList.add("hidden");
+    console.log(e);
 }
+
+window.onresize = ()=>{hide()};
+
+const li  = document.querySelectorAll("li>a");
+
+for (let w = 0; w < li.length; w++) {
+    const element = li[w];
+
+    element.addEventListener("click",(e)=>{hide()});
+
+
+}
+
+
+
+
 function show(){
     document.querySelector(".mobile-menu").classList.toggle("hidden");
 }
+
 
 
 (function() {

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+ }
+
+ body{
+    overflow-x: hidden;
 
 li{
     @apply p-4  text-slate-500 hover:underline decoration-indigo-700  underline-offset-8 mx-auto my-0 w-3/4 mt-2 rounded-lg ;
@@ -80,3 +86,59 @@ footer{
     background: linear-gradient(to right,rgba(18, 18, 185, 0.384),rgba(76, 0, 130, 0.678)),url("../Images/img\ \(7\).jpg") center no-repeat;
     background-size: cover;
 }
+
+#hero{
+    animation: ZoomIn 1s linear;
+}
+#about .boxes{
+ animation: left 1s;
+}
+#gallery img{
+ animation: left 1s linear;
+}
+
+#gallery img:nth-child(even){
+    animation: right 1s linear;
+}
+
+@keyframes ZoomIn {
+    from{
+        opacity: 0;
+        transform: scale(60%);
+    }
+    to{
+        opacity: 2;
+    }
+}
+
+@keyframes left{
+    from{
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    to{
+        opacity: 2;
+    }
+}
+
+@keyframes right {
+    from{
+        opacity: 0;
+        transform: translateX(600px);
+    }
+    to{
+        opacity: 2;
+    }
+
+}
+
+@keyframes ZoomIn {
+    from{
+        opacity: 0;
+        transform: scale(60%);
+    }
+    to{
+        opacity: 2;
+    }
+}
+
