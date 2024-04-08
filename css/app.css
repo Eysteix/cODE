@@ -8,13 +8,16 @@ li{
     transition: 2s linear ease-in-out;
 }
 
+.col li{
+    @apply  text-white  p-0 ;
+}
 
 li.active{
     @apply text-black font-bold underline;
 }
 
 i{
-    color: rgb(63, 52, 214);
+    color: rgb(255, 255, 255);
 }
 
 .mobile-menu{
@@ -38,22 +41,42 @@ i{
     width: 220px;
     height: 250px;
 }
-
-i.fab{
-    @apply rounded-full bg-gray-200 hover:bg-indigo-700 hover:text-gray-200;
+i{
+    color: rgb(140, 0, 255);
 }
 
-i.fab{
+ i.fab{
     width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30px;
+    color: indigo;
+ }
 
-}
+ .contact-icons i.fab{
+  color: white;
+ }
+
 
 .boxes img{
     width:400px;
     height: 200px;
     @apply rounded-lg;
+}
+
+input,textarea{
+    @apply p-2 rounded-sm bg-blue-100;
+}
+input::placeholder,textarea::placeholder{
+    @apply text-blue-950;
+}
+
+input[type="submit"]{
+    @apply bg-gradient-to-r from-blue-300 to-cyan-500;
+}
+
+footer{
+    background: linear-gradient(to right,rgba(18, 18, 185, 0.384),rgba(76, 0, 130, 0.678)),url("../Images/img\ \(7\).jpg") center no-repeat;
+    background-size: cover;
 }

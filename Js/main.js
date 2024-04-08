@@ -32,3 +32,10 @@ function show(){
     document.querySelector(".mobile-menu").classList.toggle("hidden");
 }
 
+
+(function() {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init({
+      publicKey: "CU-1f-rzSYdOcfuxP",
+    });
+})();
